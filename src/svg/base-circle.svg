@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 492 492">
+  <circle cx="245" cy="245" r="220" fill="{c}" />
+  <text x="245" y="236" alignment-baseline="central" font-size="275" font-weight="300" font-family="Roboto" text-anchor="middle" fill="#ffffff">{x}</text>
+</svg>
