@@ -9,7 +9,7 @@ Generates generic, single-letter icons styled according to the [Material Design]
 * [svg2png](https://www.npmjs.com/package/svg2png) - to convert the generated `.svg` icon files to `.png` format using PhantomJS
 
 ## Demo
-<img src="https://raw.github.com/eladnava/material-letter-icons/master/dist/png/A.png" width="125" /> <img src="https://raw.github.com/eladnava/material-letter-icons/master/dist/png/H.png" width="125" /> <img src="https://raw.github.com/eladnava/material-letter-icons/master/dist/png/L.png" width="125" /> <img src="https://raw.github.com/eladnava/material-letter-icons/master/dist/png/M.png" width="125" /> <img src="https://raw.github.com/eladnava/material-letter-icons/master/dist/png/R.png" width="125" /> <img src="https://raw.github.com/eladnava/material-letter-icons/master/dist/png/X.png" width="125" />
+<img src="https://raw.githubusercontent.com/EliasBF/material-letter-icons/master/dist/png/A.png" width="125" /> <img src="https://raw.githubusercontent.com/EliasBF/material-letter-icons/master/dist/png/H.png" width="125" /> <img src="https://raw.githubusercontent.com/EliasBF/material-letter-icons/master/dist/png/L.png" width="125" /> <img src="https://raw.githubusercontent.com/EliasBF/material-letter-icons/master/dist/png/N.png" width="125" /> <img src="https://raw.githubusercontent.com/EliasBF/material-letter-icons/master/dist/png/R.png" width="125" /> <img src="https://raw.githubusercontent.com/EliasBF/material-letter-icons/master/dist/png/X.png" width="125" />
 
 ## Usage
 
@@ -19,11 +19,11 @@ The icons are **pre-generated** in `.png` and `.svg` format within the `dist/` d
 
 * Install the `dependencies/Roboto-Light.ttf` font as a system-wide font, and make sure that `Light` is the only `Roboto` font weight you have installed. Unfortunately, it can't be bundled within the `base.svg` due to [a bug with PhantomJS](https://github.com/domenic/svg2png/issues/39).
 
-* Run the following commands to generate icons for custom characters:
+* Run the following commands to generate square icons with some initials and black background:
 
 ```shell
 npm install -g material-letter-icons
-material-letter-icons generate --chars '$#@'
+material-letter-icons generate --chars "EB" --background '#000' --shape 'square' -p
 ```
 
 ## Command Line Options
@@ -34,9 +34,13 @@ material-letter-icons --help
 
   Options:
 
-    -h, --help         output usage information
-    -V, --version      output the version number
-    -c, --chars <$#@>  generate icons for custom characters (no seperator)
+    -h, --help                output usage information
+    -V, --version             output the version number
+    -c, --chars <$#@>         generate icons for custom characters (no seperator)
+    -p, --pair                generate icon for pair characters (max two characters)
+    -b, --background <color>  background color for generated icons (hexadecimal color)
+    -s, --shape <shape>       shape for generated icons (square|circle)
+    -o, --output <directory>  set output directory
 ```
 
 ## Troubleshooting
